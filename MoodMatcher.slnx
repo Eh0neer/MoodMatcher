@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/src/">
+    <File Path="docker-compose.yml" />
     <Project Path="MoodMatcher.API/MoodMatcher.API.csproj" />
     <Project Path="MoodMatcher.Application/MoodMatcher.Application.csproj" />
     <Project Path="MoodMatcher.Domain/MoodMatcher.Domain.csproj" />

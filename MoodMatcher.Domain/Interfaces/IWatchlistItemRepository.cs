@@ -9,6 +9,6 @@ namespace MoodMatcher.Domain.Interfaces
 {
     public interface IWatchlistItemRepository : IRepository<WatchlistItem>
     {
-        Task
+        
     }
 }

@@ -1,3 +1,5 @@
+using Hangfire;
+using Hangfire.PostgreSql;
 
 namespace MoodMatcher.API
 {
@@ -8,7 +10,14 @@ namespace MoodMatcher.API
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
+            builder.Services.AddHangfire(config =>
+            {
+                config.UsePostgreSqlStorage(options =>
+                {
+                    options.UseNpgsqlConnection(builder.Configuration.GetConnectionString("DefaultConnection"));
+                });
+            });
+            builder.Services.AddHangfireServer();
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -22,6 +31,8 @@ namespace MoodMatcher.API
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            app.UseHangfireDashboard("/dashboard");
 
             app.UseHttpsRedirection();
 
