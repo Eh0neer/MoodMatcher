@@ -1,0 +1,6 @@
+@MoodMatcher.API_HostAddress = http://localhost:5193
+
+GET {{MoodMatcher.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

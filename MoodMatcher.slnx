@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="MoodMatcher.API/MoodMatcher.API.csproj" />
+    <Project Path="MoodMatcher.Application/MoodMatcher.Application.csproj" />
+    <Project Path="MoodMatcher.Domain/MoodMatcher.Domain.csproj" />
+    <Project Path="MoodMatcher.Infrastructure/MoodMatcher.Infrastructure.csproj" />
+  </Folder>
+</Solution>
